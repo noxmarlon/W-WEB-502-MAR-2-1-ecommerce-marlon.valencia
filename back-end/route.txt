@@ -1,0 +1,75 @@
+auth {
+  register {
+      var axios = require('axios');
+      var FormData = require('form-data');
+      var data = new FormData();
+      data.append('email', 'test@test.com');
+      data.append('password', 'azeazeaz');
+
+      var config = {
+        method: 'post',
+        url: 'http://localhost:8000/api/auth/signup',
+        headers: { 
+          ...data.getHeaders()
+        },
+        data : data
+      };
+
+      axios(config)
+      .then(function (response) {
+        console.log(JSON.stringify(response.data));
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
+  login {
+      var axios = require('axios');
+      var FormData = require('form-data');
+      var data = new FormData();
+      data.append('email', 'test@test.com');
+      data.append('password', 'azeazeaz');
+
+      var config = {
+        method: 'post',
+        url: 'http://localhost:8000/api/auth/login',
+        headers: { 
+          ...data.getHeaders()
+        },
+        data : data
+      };
+
+      axios(config)
+      .then(function (response) {
+        console.log(JSON.stringify(response.data));
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
+  logout {
+      var axios = require('axios');
+
+      var config = {
+        method: 'post',
+        url: 'http://localhost:8000/api/auth/logout',
+        headers: { 
+          'x-access-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjU3NzA4MTYzLCJleHAiOjE2NTc3MDgyMjN9.4esD9XZCdIxv6VGdIoWvU87ccuGASH_a4L61eImJKqQ'
+        }
+      };
+
+      axios(config)
+      .then(function (response) {
+        console.log(JSON.stringify(response.data));
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+}
+
+product {
+  
+}
