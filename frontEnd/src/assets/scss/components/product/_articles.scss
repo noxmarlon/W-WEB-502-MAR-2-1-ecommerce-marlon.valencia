@@ -1,0 +1,235 @@
+.featured-articles {
+   width: 90%;
+}
+.articles-section {
+   padding-top: 4rem;
+   padding-bottom: 4rem;
+   text-align: center;
+   align-items: center;
+   place-content: center;
+
+   @media screen and (max-width: 800px) {
+      padding-top: 6rem;
+   }
+
+   .articles-title {
+      text-shadow: 1px 1px 1px $clr-blue;
+   }
+}
+
+.articles-container {
+   position: relative; 
+   width: 70%;
+   height: 100%;
+   padding: 50px 0 0;
+   gap: 1rem;
+   box-sizing: border-box;
+   justify-content: space-between;
+  align-items: center;
+  place-content: center;
+  text-align: center;
+
+  .products-cards {
+      padding: 0.2rem;
+      border: 2px solid rgba($clr-primary, 0.3);
+      box-shadow: rgba(126, 140, 153, 0.2) 0px 8px 24px;
+      border-radius: 4px;
+      flex-direction: column;
+      position: relative;
+      transform: scale(.95);
+      transition: all .3s ease-in-out;
+
+      &:hover {
+         transform: translateY(-2px);
+      }
+
+      .products__discount {
+         color: $clr-dark;
+         text-shadow: 1px 1px 2px $clr-light-blue;
+         font-size: 16px;
+         font-weight: 500;
+         position: absolute;
+         transform: scale(1) translate(60%, 20%) rotate(0.1turn);         
+         background-color: $clr-blue;
+         padding: 0.4em 1.9em;
+         border-radius: 2rem;
+
+         @media screen and (min-width: 1490px) and (max-width: 1610px) {
+            transform: scale(1) translate(50%, 20%) rotate(0.1turn);         
+            padding: 0.3em 1.8em;
+         }
+         @media screen and (min-width: 1300px) and (max-width: 1490px) {
+            transform: scale(1) translate(50%, 20%) rotate(0.1turn);         
+            padding: 0.3em 1.8em;
+         }
+         @media screen and (min-width: 1024px) and (max-width: 1300px) {
+            transform: scale(1) translate(40%, 20%) rotate(0.1turn);         
+            padding: 0.3em 1.6em;
+         }
+         @media screen and (min-width: 900px) and (max-width: 1024px) {
+            transform: scale(1) translate(60%, 10%) rotate(0.1turn);         
+            padding: 0.3em 1.5em;
+         }
+         @media screen and (min-width: 900px) and (max-width: 1000px) {
+            transform: scale(1) translate(60%, 10%) rotate(0.1turn);         
+            padding: 0.3em 1.5em;
+         }
+         @media screen and (min-width: 800px) and (max-width: 900px) {
+            transform: scale(1) translate(50%, 10%) rotate(0.1turn);         
+            padding: 0.3em 1.3em;
+         }
+         @media screen and (min-width: 700px) and (max-width: 800px) {
+            transform: scale(1) translate(40%, 10%) rotate(0.1turn);         
+            padding: 0.3em 1.2em;
+         }
+         @media screen and (min-width: 600px) and (max-width: 700px) {
+            transform: scale(1) translate(30%, 10%) rotate(0.1turn);         
+            padding: 0.3em 1em;
+         }
+         @media screen and (min-width: 524px) and (max-width: 600px) {
+            transform: scale(1) translate(50%, 20%) rotate(0.1turn);         
+            padding: 0.3em 1.6em;
+         }
+         @media screen and (min-width: 464px) and (max-width: 524px) {
+            transform: scale(1) translate(45%, 20%) rotate(0.1turn);         
+            padding: 0.3em 1.4em;
+         }
+         @media screen and (min-width: 422px) and (max-width: 464px) {
+            transform: scale(1) translate(30%, 20%) rotate(0.1turn);         
+            padding: 0.3em 1.4em;
+         }
+         @media screen and (max-width: 422px) {
+            transform: scale(1) translate(30%, 0%) rotate(0.1turn);         
+            padding: 0.3em 1.2em;
+         }
+      }
+
+      .products-cards:hover {
+         height: 112% !important;
+      }
+      
+      .discount-small {
+            color: $clr-dark;
+            text-shadow: 1px 1px 2px $clr-light-blue;
+            font-size: 16px;
+            font-weight: 500;
+            position: absolute;
+            transform: scale(1) translate(75%, 15%) rotate(0.1turn);         
+            background-color: $clr-blue;
+            padding: 0.4em 1.4em;
+            border-radius: 2rem;
+
+            @media screen and (min-width: 1490px) and (max-width: 1610px) {
+               transform: scale(1) translate(70%, 20%) rotate(0.1turn);         
+               padding: 0.3em 1.4em;
+            }
+            @media screen and (min-width: 1260px) and (max-width: 1490px) {
+               transform: scale(1) translate(70%, 20%) rotate(0.1turn);         
+               padding: 0.3em 1.4em;
+            }
+            @media screen and (min-width: 1024px) and (max-width: 1260px) {
+               transform: scale(1) translate(50%, 18%) rotate(0.1turn);         
+               padding: 0.3em 1.2em;
+            }
+            @media screen and (min-width: 900px) and (max-width: 1024px) {
+               transform: scale(1) translate(50%, 10%) rotate(0.1turn);         
+               padding: 0.3em 1.4em;
+            }
+            @media screen and (min-width: 900px) and (max-width: 1000px) {
+               transform: scale(1) translate(40%, 10%) rotate(0.1turn);         
+               padding: 0.3em 1.4em;
+            }
+            @media screen and (min-width: 800px) and (max-width: 900px) {
+               transform: scale(1) translate(40%, 15%) rotate(0.1turn);         
+               padding: 0.3em 1.2em;
+            }
+            @media screen and (min-width: 700px) and (max-width: 800px) {
+               transform: scale(1) translate(30%, 10%) rotate(0.1turn);        
+               padding: 0.3em 1em;
+            }
+            @media screen and (min-width: 600px) and (max-width: 700px) {
+               transform: scale(1) translate(20%, 8%) rotate(0.1turn);         
+               padding: 0.3em 1em;
+            }
+            @media screen and (min-width: 524px) and (max-width: 600px) {
+               transform: scale(1) translate(60%, 10%) rotate(0.1turn);         
+               padding: 0.3em 1.3em;
+            }
+            @media screen and (min-width: 464px) and (max-width: 524px) {
+               transform: scale(1) translate(45%, 20%) rotate(0.1turn);         
+               padding: 0.3em 1.1em;
+            }
+            @media screen and (min-width: 422px) and (max-width: 464px) {
+               transform: scale(1) translate(40%, 10%) rotate(0.1turn);         
+               padding: 0.3em 1em;
+            }
+            @media screen and (max-width: 422px) {
+               transform: scale(1) translate(40%, 0%) rotate(0.1turn);         
+               padding: 0.3em 0.9em;
+            }
+         }
+
+      img {
+         padding: 0.6em;
+         aspect-ratio: 1 / 1;
+         border-bottom: 1px solid rgba($clr-primary, 0.4);
+         border-top-left-radius: 1rem;
+         border-top-right-radius: 1rem;
+      }
+      
+      .products-details {
+         line-height: 1.7;
+         padding: 0.4rem 0;
+
+         h2 {
+            font-size: 18px;
+            text-shadow: 1px 1px 1px $clr-blue;
+         }
+
+         p {
+            font-size: 14px;
+         }
+
+         .products__price {
+            font-size: 22px;
+            font-weight: 500;
+            text-shadow: 1px 1px 1px $clr-blue;
+         }
+         
+         .products__currency {
+            font-size: 16px;
+            display: inline-block;
+            vertical-align: top;
+            color: $clr-dark-blue;
+         }
+
+         .btn {
+            display: flex;
+            align-items: center;
+            gap: 0.2rem;
+         }
+      }
+   }
+
+   @media screen and (max-width: 1487px) {
+      width: 80%;
+   }
+   @media screen and (max-width: 1258px) {
+      .cta {
+         gap: 0.3rem;
+         .btn {
+            padding: 0.8rem 1.4rem;
+         }
+      }
+   }
+   @media screen and (max-width: 1024px) {
+      width: 80%;
+      gap: 1rem;
+      grid-template-columns: repeat(3, 1fr);
+   }
+   @media screen and (max-width: 600px) {
+      width: 90%;
+      gap: 0.2rem;
+      grid-template-columns: repeat(2, 1fr);
+   }
+}

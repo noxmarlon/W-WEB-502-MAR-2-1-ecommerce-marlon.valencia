@@ -1,0 +1,125 @@
+.cart-section {
+   padding-top: 4rem;
+   padding-bottom: 2rem;
+   text-align: center;
+   align-items: center;
+   place-content: center;
+
+   @media screen and (max-width: 800px) {
+      padding-top: 8rem;
+   }
+}
+
+.cart-articles-container {
+   position: relative; 
+   width: 70%;
+   height: 100%;
+   padding: 0 0 50px 0;
+   gap: 1rem;
+   box-sizing: border-box;
+   justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+
+  @media screen and (min-width: 800px) {
+   grid-template-columns: 2fr 1fr;
+      .cart-right {
+         position: fixed;
+         place-self: normal;
+         right: 13%;
+         width: 25.2%;
+      }
+  }
+  @media screen and (min-width: 800px) and (max-width: 1300px) {
+   .cart-right {
+      position: fixed;
+      place-self: normal;
+      right: 5%;
+      width: 32.2%;
+      .total {
+         font-size: 1.2rem;
+      }
+   }
+  }
+
+  .cart-left {
+   overflow: auto;
+   padding: 2rem 0.5rem;
+   box-shadow: rgba(126, 140, 153, 0.2) 0px 8px 24px;
+
+   .title {
+      padding-bottom: 1rem;
+      border-bottom: 0.1rem solid rgba($clr-gray, 0.3);
+      width: 80%;
+      margin: 0 auto;
+   }
+  }
+
+  .cart-right {   
+      gap: 1rem;
+      padding: 2rem;
+      flex-direction: column;
+      background: $clr-white;
+      box-shadow: rgba(126, 140, 153, 0.2) 0px 8px 24px;
+  }
+
+  .products-cards {
+      padding: 0.2rem;
+      grid-template-columns: 1fr 2fr;
+      border-bottom: 2px solid rgba($clr-primary, 0.3);
+      border-radius: 4px;
+      position: relative;
+      transform: scale(.85);
+      transition: all .3s ease-in-out;
+
+      img {
+         aspect-ratio: 1 / 1;
+      }
+      
+      .products-details {
+         grid-template-rows: repeat(2, 1fr);
+         text-align: start;
+         line-height: 1.8;
+         padding-top: 1rem;
+
+         .info {
+            flex-direction: row;
+            justify-content: space-between;
+         }
+
+         .stars {
+            display: flex;
+            flex-direction: column;
+         }
+
+         h2 {
+            font-size: 22px;
+            text-shadow: 1px 1px 1px $clr-blue;
+         }
+
+         p {
+            font-size: 14px;
+         }
+
+         .products__price {
+            font-size: 22px;
+            font-weight: 500;
+            text-shadow: 1px 1px 1px $clr-blue;
+         }
+         
+         .products__currency {
+            font-size: 16px;
+            display: inline-block;
+            vertical-align: top;
+            color: $clr-dark-blue;
+         }
+
+         .btn-delete {
+            display: flex;
+            align-items: center;
+            gap: 0.2rem;
+         }
+      }
+   }
+}

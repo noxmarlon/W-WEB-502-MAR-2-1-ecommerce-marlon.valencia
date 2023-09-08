@@ -1,0 +1,250 @@
+ /* ========== HEADER ========== */ 
+.hero {
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	background-color: $clr-blue-bg;
+	padding: 10px 0;
+	color: #fff;
+	.wrapper {
+		width: 65%;
+		margin: 0 auto;
+	}
+	.brand {
+		font-size: 1.1rem;
+	}
+	.left,
+	.right {
+		align-items: center;
+		gap: 2rem;
+	}
+	.middle {
+		width: 65%;
+		gap: 3rem;
+		#categories {
+			flex-direction: row;
+			gap: 0.5rem;
+			text-align: center;
+			align-items: center;
+			h3 {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				gap: 0.4rem;
+				font-weight: 400;
+				font-size: 1.1rem;
+				.fa {
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+	.right {
+		button {
+			font-size: 1rem;
+		}
+		.cart-icon {
+			font-size: 1rem;
+			padding-top: 0.2rem;
+		}
+	}
+
+	.center {
+		place-self: center;
+	}
+	@media screen and (max-width: 1260px) {
+		padding: 5px 0;
+		.wrapper {
+			width: 100%;
+			justify-content: center;
+		}
+		.middle {
+			width: 60%;
+			#categories {
+				h3 {
+					font-size: 0.9rem;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 800px) {
+		.left, .right {
+			display: none; 
+		}
+		.middle {
+			width: 90%;
+			gap: 0.8rem;
+			#categories {
+				h3 {
+					font-size: 0.8rem;
+					.fa {
+					font-size: 0.8rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+ /* ========== SEARCH BAR ========== */ 
+.search__container {
+	position: relative;
+	width: 100%;
+	.search-wrapper {
+		position: relative;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		background-color: $clr-white;
+		.search-bar {
+			width: 100%;
+			height: auto;
+			padding: 0 1.5rem;
+			input {
+				font-size: 1.08rem;
+				width: 100%;
+				height: 100%;
+				padding: .5rem 0;
+			}
+		}
+		.search-icon {
+			cursor: pointer;
+			align-self: center;
+			align-items: center;
+			color: $clr-dark-blue;
+			width: 33px;
+			height: 33px;
+			margin-right: 10px;
+			}
+			
+		@media screen and (max-width: 800px) {
+			.search-bar {
+				padding: 0 0.8rem;
+			}
+			.search-bar input {
+				font-size: 0.9rem;
+			}
+		}
+	}
+}
+	.search-results  {
+		position: absolute;
+		top: 2.6rem;
+		z-index: 1500;
+		width: 100%;
+		@media screen and (max-width: 800px) {
+			top: 2.3rem;
+		}
+	
+	ul {	
+		background-color: $clr-white;
+		display: flex;
+		flex-direction: column;
+		border: 0.1rem solid rgba($clr-primary, 0.4);
+		a {
+			padding: .25rem 1rem;
+			width: 100%;
+			&:hover {
+				color: $clr-dark;
+				background-color: rgba($clr-primary, 0.4);
+			}
+		}
+	}
+}
+
+
+ /* ========== NAVBAR ========== */ 
+#navbar-hero {
+	padding-top: 5rem;
+	width: 100%;
+	.navbar {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		gap: 4rem;
+
+		#navlinks {
+			display: flex;
+			flex-direction: row;
+			gap: 8rem;
+			text-shadow: 1px 1px 1px $clr-blue;
+			@media screen and (min-width: 1424px) {
+				gap: 8rem;
+			}
+			@media screen and (min-width: 800px) and (max-width: 1424px) {
+				gap: 5.5rem;
+			}
+			@media screen and (min-width: 700px) and (max-width: 800px) {
+				gap: 5rem;
+			}
+			@media screen and (max-width: 700px) {
+				gap: 3rem;
+			}
+		}
+	}
+	@media screen and (min-width: 800px) {
+		.cart, .love {
+			display: none;
+		}
+		li a {
+			.text {
+				display: block;
+			}
+			.icon {
+				display: none;	
+			}
+			font-size: 1rem;
+			&:hover {
+				color: $clr-dark;
+				text-shadow: 1px 1px 2px $clr-dark-blue;
+			}
+		}
+	}
+	@media screen and (max-width: 800px) {
+		.navbar {
+			border-bottom: none;
+		}
+		.admin {
+			display: none;
+		}
+		li a {
+			.text {
+				display: none;
+			}
+			.icon {
+				display: block;
+			}
+		}
+		position: fixed;
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+		background: $clr-blue-bg;
+		left: 50%;
+		transform: translateX(-50%);
+		padding: 0.4rem 1rem;
+		bottom: 0;
+		a {
+			cursor: pointer;
+			background: transparent;
+			padding: 1rem;
+			border-radius: 50%;
+			display: flex;
+			color: $clr-white;
+			stroke: $clr-white;
+			&:hover {
+				color: $clr-black;
+				background: rgba(200, 224, 238, 0.616)
+			}
+			&.active {
+				color: var(--clr-white);
+				stroke: var(--clr-white);
+				background: rgba(337, 80, 145, 0.3);
+			}
+			/* ========== MEDIA QUERIES (Small) ========== */
+			@media screen and (max-width: 600px) {
+				padding: 0.9rem;
+			}
+		}
+	}
+}

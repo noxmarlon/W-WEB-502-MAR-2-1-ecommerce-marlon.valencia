@@ -1,0 +1,93 @@
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+   width: 100%;
+   height: 100%;
+   width: $container-width-lg;
+   margin: 0 auto;
+
+   @media (min-width: 1220px) {
+       max-width: 1200px;
+    }
+  @media screen and (max-width: 1024px) {
+      width: $container-width-md;
+  }
+  @media screen and (max-width: 600px) {
+      width: $container-width-sm;
+ }
+}
+ 
+ .flex {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ .f-flex {
+  display: flex;
+  align-items: center;
+ }
+ .d-flex {
+  display: flex;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-col {
+  flex-direction: column;
+}
+.space-between {
+  justify-content: space-between;
+}
+
+ .grid {
+   display: grid;
+   place-items: center;
+ }
+ .d-grid {
+  display: grid;
+ }
+ 
+ .col-2 {
+   grid-template-columns: repeat(2, 1fr);
+ }
+ .col-3 {
+   grid-template-columns: repeat(3, 1fr);
+ }
+ .col-4 {
+  grid-template-columns: repeat(4, 1fr);
+ }
+ .col-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+.row-2 {
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.mg-auto {
+  margin: 0 auto;
+}
+
+.white {
+  color: $clr-white;
+}
+.text-light-blue {
+  color: $clr-light-blue;
+ }
+ .text-dark-blue {
+   color: $clr-dark-blue;
+ }
+ .text-dark {
+   color: $clr-dark;
+ }
+ a {
+   text-decoration: none;
+   color: black;
+ }
+ li {
+   list-style: none;
+ }
+ .uppercase {
+   text-transform: uppercase;
+ }
+ .capitalize {
+   text-transform: capitalize;
+ }

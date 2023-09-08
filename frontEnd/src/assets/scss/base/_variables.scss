@@ -1,0 +1,24 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/*=============== VARIABLES SCSS ===============*/
+  $ff: 'Poppins', sans-serif;
+ 
+  $clr-bg: hsl(0, 0%, 100%);
+  $clr-blue-bg: hsl(213, 67%, 26%);
+  $clr-primary: hsl(207, 76%, 73%);
+  $clr-blue: hsl(207, 79%, 85%);
+  $clr-light-blue: hsl(225, 80%, 94%);
+  $clr-lighter-blue: hsl(223, 78%, 96%);
+  $clr-dark-blue: hsl(223, 48%, 36%);
+  $clr-white: hsl(0, 0%, 100%);
+  $clr-light: hsla(0, 0%, 100%, 0.692);
+  $clr-gray: hsl(0, 3%, 75%);
+  $clr-dark: hsl(0, 0%, 17%);
+  $clr-black: hsl(0, 0%, 3%);
+  
+  $transition: all 400ms ease;
+
+  $container-width-lg: 75%;
+  $container-width-md: 86%;
+  $container-width-sm: 90%;
